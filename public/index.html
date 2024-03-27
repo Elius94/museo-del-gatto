@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- for optimal display on high DPI devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Import maps polyfill -->
+    <!-- Remove this when import maps will be widely supported -->
+    <!-- <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script> -->
+
+    <link rel="stylesheet" href="dist/app.css" />
+</head>
+
+<body>
+    <div id="loader-box">
+        <div id="loader-container">
+            <h1 id="welcomeText"></h1>
+            <h2>Loading...</h2>
+            <div class="loader-align">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+    <div id="blocker" class="hidden-05">
+        <div id="instructions">
+            <p style="font-size:36px">
+                Click to explore the gallery
+            </p>
+            <p>
+                Move: WASD<br />
+                Jump: SPACE<br />
+                Look: MOUSE
+            </p>
+        </div>
+    </div>
+    <div id="artworkDetailsPanel" class="hidden-05">
+        <a id="closeArtworkDetailsPanel">X</a>
+        <img id="artworkDetailsPanelImage" src="" />
+        <p style="font-size:36px">
+            Title: <span id="artworkDetailsPanelTitle"></span>
+        </p>
+        <p>
+            Year: <span id="artworkDetailsPanelYear"></span>
+        </p>
+        <p>
+            Author: <span id="artworkDetailsPanelAuthor"></span>
+        </p>
+        <p>
+            Description: <span id="artworkDetailsPanelDescription"></span>
+        </p>
+        <!-- Add a button to open redirect url -->
+        <a id="artworkDetailsPanelUrl" href="" target="_blank">More info</a>
+    </div>
+    <div id="copyright">
+        <p>
+            &copy; 2023 <a href="https://www.linkedin.com/in/elia-lazzari-305ab7a3/" target="_blank">Elia Lazzari</a>
+        </p>
+    </div>
+    <div id="container-renderer"></div>
+    <div id="container">
+        <div id="container3d">
+            <canvas id="canvas3d"></canvas>
+        </div>
+    </div>
+</body>
+
+<script type="module" src="dist/app.js"></script>

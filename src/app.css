@@ -1,0 +1,364 @@
+#blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #0000004d;
+    z-index: 88;
+}
+
+#instructions {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: monospace;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#artworkDetailsPanel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: monospace;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 89;
+}
+
+#artworkDetailsPanel img {
+    width: auto;
+    height: auto;
+    max-height: 63vh;
+    padding: 10px;
+}
+
+#artworkDetailsPanel p {    
+    line-height: 17px!important;
+    max-width: 60vw !important;
+    margin: 10px !important;
+}
+
+@media screen and (max-width: 600px) {
+    #artworkDetailsPanel img {
+        width: auto !important;
+        height: auto !important;
+        max-height: 50vh !important;
+        padding: 10px !important;
+    }
+    #artworkDetailsPanel p {    
+        line-height: 17px!important;
+        max-width: 90vw !important;
+        margin: 8px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* must looks like a rounded white btn */
+#artworkDetailsPanelUrl {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+#closeArtworkDetailsPanel {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: auto;
+    height: auto;
+    color: #000;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Monospace;
+    font-size: 13px;
+    line-height: 24px;
+    overscroll-behavior: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#info {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    /* TODO Solve this in HTML */
+}
+
+a,
+button,
+input,
+select {
+    pointer-events: auto;
+}
+
+.lil-gui {
+    z-index: 2 !important;
+    /* TODO Solve this in HTML */
+}
+
+@media all and (max-width: 640px) {
+    .lil-gui.root {
+        left: auto;
+        top: 0;
+        max-height: 50%;
+        max-width: 80%;
+        bottom: auto;
+        right: 0;
+    }
+}
+
+#overlay {
+    position: absolute;
+    font-size: 16px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#overlay button {
+    background: transparent;
+    border: 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#notSupported {
+    width: 50%;
+    margin: auto;
+    background-color: #f00;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#loader-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000;
+    z-index: 99999;
+}
+
+#loader-container {
+    /* Add the blur effect */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+    background: 
+        radial-gradient(transparent, black),
+        url("./textures/bg/20220521-DSC08782.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+    /* background-color: #050505; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	color: transparent;
+    /* z-index: 2; */
+}
+
+#loader-container h1 {
+    /* color: #e9e9e9; */
+	color: transparent;
+    font-size: 30vw;
+}
+
+#loader-container h2 {
+    /* color: #e9e9e9; */
+	color: #403746;
+    position: fixed;
+    bottom: 125px;
+}
+
+.loader-align {
+    /* margin-top: 30px; */
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    bottom: 94px;
+    position: absolute;
+}
+
+.loader {
+    width: 0;
+    height: 4.8px;
+    display: inline-block;
+    position: relative;
+    background: #403746;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    /* animation: animFw 8s linear infinite; */
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: #403746;
+    position: absolute;
+    top: 9px;
+    right: -2px;
+    opacity: 0;
+    transform: rotate(-45deg) translateX(0px);
+    box-sizing: border-box;
+    animation: coli1 0.3s linear infinite;
+}
+
+.loader::before {
+    top: -4px;
+    transform: rotate(45deg);
+    animation: coli2 0.3s linear infinite;
+}
+
+/* @keyframes animFw {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+} */
+
+@keyframes coli1 {
+    0% {
+        transform: rotate(-45deg) translateX(0px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: rotate(-45deg) translateX(-45px);
+        opacity: 0;
+    }
+}
+
+@keyframes coli2 {
+    0% {
+        transform: rotate(45deg) translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(45deg) translateX(-45px);
+        opacity: 0.7;
+    }
+}
+
+#copyright {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: auto;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    /* TODO Solve this in HTML */
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.hidden-05 {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.show-05 {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
