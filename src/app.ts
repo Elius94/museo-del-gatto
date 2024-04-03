@@ -156,7 +156,7 @@ renderer.xr.enabled = true;
 container.appendChild(renderer.domElement);
 
 /*const texture = */txtLoader.load(
-  `./textures/general/HD/giau_ground.jpg`, // Always use HD texture for the sky
+  `./textures/general/HD/sky.jpg`, // Always use HD texture for the sky
   (t) => {
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     pmremGenerator.compileEquirectangularShader();
