@@ -141,7 +141,8 @@
                         "COLOR_0" : 0,
                         "POSITION" : 1,
                         "TEXCOORD_0" : 2,
-                        "NORMAL" : 3
+                        "NORMAL" : 3,
+                        "TANGENT" : 4
                     },
                     "extensions" : {
                         "KHR_draco_mesh_compression" : {
@@ -150,11 +151,12 @@
                                 "COLOR_0" : 0,
                                 "POSITION" : 1,
                                 "TEXCOORD_0" : 2,
-                                "NORMAL" : 3
+                                "NORMAL" : 3,
+                                "TANGENT" : 4
                             }
                         }
                     },
-                    "indices" : 4,
+                    "indices" : 5,
                     "material" : 0,
                     "mode" : 4
                 }
@@ -165,9 +167,10 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 5,
-                        "TEXCOORD_0" : 6,
-                        "NORMAL" : 7
+                        "POSITION" : 6,
+                        "TEXCOORD_0" : 7,
+                        "NORMAL" : 8,
+                        "TANGENT" : 9
                     },
                     "extensions" : {
                         "KHR_draco_mesh_compression" : {
@@ -175,13 +178,22 @@
                             "attributes" : {
                                 "POSITION" : 0,
                                 "TEXCOORD_0" : 1,
-                                "NORMAL" : 2
+                                "NORMAL" : 2,
+                                "TANGENT" : 3
                             }
                         }
                     },
-                    "indices" : 8,
+                    "indices" : 10,
                     "material" : 1,
                     "mode" : 4
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 11
+                    },
+                    "indices" : 12,
+                    "material" : 1,
+                    "mode" : 1
                 }
             ]
         }
@@ -232,6 +244,11 @@
             "type" : "VEC3"
         },
         {
+            "componentType" : 5126,
+            "count" : 168,
+            "type" : "VEC4"
+        },
+        {
             "componentType" : 5123,
             "count" : 180,
             "type" : "SCALAR"
@@ -262,21 +279,60 @@
             "type" : "VEC3"
         },
         {
+            "componentType" : 5126,
+            "count" : 866,
+            "type" : "VEC4"
+        },
+        {
             "componentType" : 5123,
             "count" : 1176,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 32,
+            "max" : [
+                3.9695730209350586,
+                4.800000190734863,
+                3.7948219776153564
+            ],
+            "min" : [
+                -3.9695730209350586,
+                4.376929759979248,
+                0.22029219567775726
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 32,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1142,
+            "byteLength" : 1270,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 4181,
-            "byteOffset" : 1144
+            "byteLength" : 4671,
+            "byteOffset" : 1272
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 384,
+            "byteOffset" : 5944,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 64,
+            "byteOffset" : 6328,
+            "target" : 34963
         }
     ],
     "samplers" : [
@@ -287,7 +343,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 5328,
+            "byteLength" : 6392,
             "uri" : "Virtual Gallery.bin"
         }
     ]
