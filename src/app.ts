@@ -678,6 +678,7 @@ async function init() {
       child.material.needsUpdate = true;
     }
     if (child.isMesh) {
+      child.material.side = THREE.DoubleSide;
       child.castShadow = true;
       child.receiveShadow = true;
       if (child.material.map) {
