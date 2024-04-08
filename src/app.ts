@@ -24,8 +24,8 @@ import TouchControls from './touch-controller/TouchControls.js';
 import ArtworkFrame, { ARTWORK_BASE_PATH, ArtworkFrameOptions } from './Artwork.js';
 import { ArtworksCollection } from './Artworks.js';
 import { GamePad } from './Gamepad.js';
-// import { Bullets } from './Bullets.js';
-// import { Npc } from './Npc.js';
+import { Bullets } from './Bullets.js';
+import { Npc } from './Npc.js';
 // import { GenerativeLandscape } from './GenerativeLandscape.js';
 
 function isMobile() {
@@ -37,7 +37,7 @@ function hasTouchSupport() {
   return 'ontouchstart' in document.documentElement;
 }
 
-const TUNING = false;
+const TUNING = true;
 
 let textureQuality = isMobile() ? "MD" : "HD";
 // Check if quality argument is passed in the url and set the texture quality accordingly
@@ -120,6 +120,16 @@ directionalLight.shadow.bias = -0.00001;
 window.directionalLight = directionalLight;
 scene.add(directionalLight);
 
+const spotLights = [
+  new THREE.SpotLight(0xffffff, 1, 0, Math.PI / 2, 0.5),
+];
+
+spotLights[0].position.set(10, 10, 0);
+spotLights[0].target.position.set(0, 0, 0);
+spotLights[0].castShadow = true;
+
+scene.add(spotLights[0]);
+
 //const texture = txtLoader.load('./textures/general/DSC02177-Modifica.jpg');
 // Add spotlights to the scene
 // const spotLights = [
@@ -150,7 +160,7 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.VSMShadowMap;
 // renderer.outputColorSpace = THREE.NoColorSpace;
 
-renderer.toneMapping = THREE.LinearToneMapping;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = toneMappingExp;
 renderer.xr.enabled = true;
 container.appendChild(renderer.domElement);
@@ -215,19 +225,22 @@ let shiftKey = false;
 const gamepad = new GamePad();
 
 // Bullets
-// const bullets = new Bullets({
-//   scene,
-//   camera,
-//   playerCollider,
-//   playerDirection,
-//   playerVelocity,
-//   mouseTime: 0,
-//   gravity: GRAVITY
-// });
+const bullets = new Bullets({
+  scene,
+  camera,
+  playerCollider,
+  playerDirection,
+  playerVelocity,
+  mouseTime: 0,
+  gravity: GRAVITY
+});
 
-// const npc = new Npc({
-//   scene
-// });
+const npc = new Npc({
+  scene,
+  position: new THREE.Vector3(-15, 0, 0),
+  rotation: new THREE.Euler(0, 45, 0),
+  scale: 20
+});
 
 if (!isMobile() || !hasTouchSupport()) {
   document.addEventListener('keydown', (event) => {
@@ -245,13 +258,13 @@ if (!isMobile() || !hasTouchSupport()) {
   container.addEventListener('mousedown', () => {
     //console.log('requestPointerLock')
     document.body.requestPointerLock();
-    // bullets.setMouseTime(performance.now());
+    bullets.setMouseTime(performance.now());
   });
 
-  // document.addEventListener('mouseup', () => {
-  //   //console.log('exitPointerLock')
-  //   if ( document.pointerLockElement !== null) bullets.throwBall();
-  // });
+  document.addEventListener('mouseup', () => {
+    //console.log('exitPointerLock')
+    if ( document.pointerLockElement !== null) bullets.throwBall();
+  });
 
   document.body.addEventListener('mousemove', (event) => {
     if (document.pointerLockElement === document.body) {
@@ -271,8 +284,8 @@ function setLoaderPercentage(percentage: number) {
 
 const welcomeTexts = [
   { text: 'Hi!', delay: 1000, size: "30vw" },
-  { text: 'Welcome to my', delay: 1000, size: "12vw" },
-  { text: 'Virtual Gallery', delay: 1500, size: "10vw" },
+  { text: 'Welcome to', delay: 1000, size: "12vw" },
+  { text: 'Meowseum 😺', delay: 3000, size: "10vw" },
   { text: 'Enjoy your visit =)', delay: 1000, size: "8vw" },
 ];
 
@@ -545,10 +558,10 @@ function controls(deltaTime: number) {
   }
 
   // manage shooting
-  // if (gamepad.buttons[1] && performance.now() - bullets.getMouseTime() > 100) {
-  //   bullets.setMouseTime(performance.now());
-  //   bullets.throwBall();
-  // }
+  if (gamepad.buttons[1] && performance.now() - bullets.getMouseTime() > 100) {
+    bullets.setMouseTime(performance.now());
+    bullets.throwBall();
+  }
 
   if (TUNING) {
     const precision = shiftKey ? 0.1 : 1;
@@ -884,12 +897,12 @@ function animate() {
   // an object traversing another too quickly for detection.
   gamepad.update();
   // lightHelper.update()
-  // npc.update(deltaTime);
+  npc.update(deltaTime);
 
   for (let i = 0; i < STEPS_PER_FRAME; i++) {
     controls(deltaTime);
     updatePlayer(deltaTime);
-    // bullets.updateSpheres(deltaTime, worldOctree);
+    bullets.updateSpheres(deltaTime, worldOctree);
     teleportPlayerIfOob();
   }
 

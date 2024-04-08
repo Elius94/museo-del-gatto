@@ -22,6 +22,7 @@ export class Bullets {
     mouseTime: number;
     sphereGeometry: THREE.IcosahedronGeometry;
     sphereMaterial: THREE.MeshLambertMaterial;
+    texture: THREE.Texture;
     spheres = [] as any[];
     sphereIdx = 0;
     vector1: THREE.Vector3;
@@ -40,7 +41,9 @@ export class Bullets {
         this.gravity = gravity || 9.8;
 
         this.sphereGeometry = new THREE.IcosahedronGeometry(SPHERE_RADIUS, 5);
-        this.sphereMaterial = new THREE.MeshLambertMaterial({ color: 0xdede8d });
+        this.sphereMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });
+        this.texture = new THREE.TextureLoader().load('./textures/catxture.jpeg');
+        this.sphereMaterial.map = this.texture;
 
         this.vector1 = new THREE.Vector3();
         this.vector2 = new THREE.Vector3();

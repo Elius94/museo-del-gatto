@@ -3,10 +3,13 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 export interface NpcOptions {
     scene: THREE.Scene;
+    position: THREE.Vector3;
+    rotation?: THREE.Euler;
+    scale?: number;
 }
 
 export class Npc {
-    model = '/models/gltf/additional_models/truffle_man/scene.gltf';
+    model = './models/gltf/additional_models/bicolor_cat.glb';
     mixer: THREE.AnimationMixer | null = null;
 
     constructor(props: NpcOptions) {
@@ -16,6 +19,14 @@ export class Npc {
         loader.load(this.model, (gltf) => {
             const npcModel = gltf.scene;
             scene.add(npcModel);
+            // Scale the NPC model
+            npcModel.scale.set(props.scale || 1, props.scale || 1, props.scale || 1);
+            // Position the NPC model
+            npcModel.position.copy(props.position);
+            // Rotate the NPC model
+            if (props.rotation) {
+                npcModel.rotation.copy(props.rotation);
+            }
 
             // Verifica se ci sono animazioni nel modello
             if (gltf.animations && gltf.animations.length > 0) {
