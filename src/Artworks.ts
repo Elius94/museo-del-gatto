@@ -334,7 +334,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_03043.jpg",
+        url: "rinascimento-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -349,7 +349,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC08093.jpg",
+        url: "rinascimento-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -364,7 +364,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC01600-Enhanced.jpg",
+        url: "rinascimento-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -379,7 +379,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC07940.jpg",
+        url: "rinascimento-4.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -394,7 +394,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC08479.jpg",
+        url: "rinascimento-5.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -409,7 +409,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "20220809-DSC00412-SharpenAI-Focus-2.jpg",
+        url: "seicento-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -424,7 +424,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "20220809-DSC00412-SharpenAI-Focus-2.jpg",
+        url: "seicento-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -439,7 +439,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC00256-2.jpg",
+        url: "seicento-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -454,7 +454,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_03049.jpg",
+        url: "settencento-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -469,7 +469,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_05713.jpg",
+        url: "settencento-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -484,7 +484,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "000031.jpg",
+        url: "settencento-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -504,7 +504,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_05089.jpg",
+        url: "conteporaneo-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -519,7 +519,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_07235-Modifica-2.jpg",
+        url: "conteporaneo-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -534,7 +534,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "DSC02687.jpg",
+        url: "contemporaneo-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -549,7 +549,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_02957.jpg",
+        url: "contemporaneo-4.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -564,7 +564,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_05106.jpg",
+        url: "contemporaneo-5.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -579,7 +579,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "EL_04791.jpg"
+        url: "contemporaneo-6.jpeg",
     },
     // FINE AREA PARETE SOPPALCO
     // INIZIO AREA PARETE VETRATA (da destra a sinistra, guardando la parete, tutte orizzontali)
@@ -593,7 +593,7 @@ export const ArtworksCollection = [
         position: { x: -8.739999999999778, y: 1.500000000000002, z: 7.3249999999999655 },
         rotation: { x: -8.109999999999971, y: 1.5699999999999934, z: 89.79499999999987 },
         size: 2.51,
-        url: "EL_06140.jpg",
+        url: "etruschi-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -604,7 +604,7 @@ export const ArtworksCollection = [
         position: { x: -8.739999999999778, y: 1.500000000000002, z: 3.6950000000000425 },
         rotation: { x: -8.109999999999971, y: 1.5699999999999934, z: 89.79499999999987 },
         size: 2.51,
-        url: "DSC01894-2.jpg",
+        url: "romani-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -615,7 +615,7 @@ export const ArtworksCollection = [
         position: { x: -8.739999999999778, y: 1.500000000000002, z: 0.06499999999989829 },
         rotation: { x: -8.109999999999971, y: 1.5699999999999934, z: 89.79499999999987 },
         size: 2.51,
-        url: "DSC02631.jpg",
+        url: "medioevo-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -626,7 +626,7 @@ export const ArtworksCollection = [
         position: { x: -8.739999999999778, y: 1.500000000000002, z: -3.555000000000115 },
         rotation: { x: -8.109999999999971, y: 1.5699999999999934, z: 89.79499999999987 },
         size: 2.51,
-        url: "DSC08782.jpg",
+        url: "medioevo-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -637,7 +637,7 @@ export const ArtworksCollection = [
         position: { x: -8.739999999999778, y: 1.500000000000002, z: -7.185000000000078 },
         rotation: { x: -8.109999999999971, y: 1.5699999999999934, z: 89.79499999999987 },
         size: 2.51,
-        url: "DSC09594.jpg",
+        url: "medioevo-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -654,7 +654,7 @@ export const ArtworksCollection = [
         position: { x: 2.1649999999999983, y: 4.97000000000001, z: 11.944999999999922 },
         rotation: { x: 6.2849999999999016, y: 3.1400000000000365, z: 81.67999999999611 },
         size: 1.69,
-        url: "000031-2.jpg",
+        url: "contemporaneo-7.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -665,7 +665,7 @@ export const ArtworksCollection = [
         position: { x: 0.6150000000000004, y: 4.97000000000001, z: 11.944999999999922 },
         rotation: { x: 6.2849999999999016, y: 3.1400000000000365, z: 81.67999999999611 },
         size: 1.69,
-        url: "DSC09646.jpg",
+        url: "contemporaneo-8.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -675,7 +675,7 @@ export const ArtworksCollection = [
         position: { x: -0.9350000000000006, y: 4.97000000000001, z: 11.944999999999922 },
         rotation: { x: 6.2849999999999016, y: 3.1400000000000365, z: 81.67999999999611 },
         size: 1.69,
-        url: "DSC00675-Edit.jpg",
+        url: "contemporaneo-9.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -686,7 +686,7 @@ export const ArtworksCollection = [
         position: { x: -7.284999999999908, y: 1.7700000000000518, z: 11.944999999999922 },
         rotation: { x: 6.2849999999999016, y: 3.1400000000000365, z: 81.67999999999611 },
         size: 1.69,
-        url: "DSC08787.jpg",
+        url: "etruschi-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -703,7 +703,7 @@ export const ArtworksCollection = [
         position: { x: -7.284999999999908, y: 1.7700000000000518, z: -11.95499999999987 },
         rotation: { x: 6.2849999999999016, y: 3.1400000000000365, z: 81.67999999999611 },
         size: 1.69,
-        url: "DSC07915.jpg",
+        url: "medioevo-4.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -714,7 +714,7 @@ export const ArtworksCollection = [
         position: { x: 0.5650000000000241, y: 4.970000000000005, z: -11.939999999999905 },
         rotation: { x: 6.2849999999999016, y: 3.145000000000036, z: 81.67999999999611 },
         size: 11.09,
-        url: "EL_04301-Pano-2.jpg",
+        url: "louis-wain.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
