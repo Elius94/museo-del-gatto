@@ -303,7 +303,7 @@ export const ArtworksCollection = [
         position: { x: -1.516, y: 1.5, z: 8.821 },
         rotation: { x: -31.415, y: -38.484, z: 50.269 }, // quelle interne
         size: 1.71,
-        url: "EL_00494.jpg",
+        url: "intro.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -314,7 +314,7 @@ export const ArtworksCollection = [
         position: { x: -1.426, y: 1.5, z: 8.731 },
         rotation: { x: -31.415, y: -38.484, z: 50.269 }, // quelle interne
         size: 1.71,
-        url: "EL_05265.jpg",
+        url: "intro.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -454,7 +454,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "settencento-1.jpeg",
+        url: "settecento-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -469,7 +469,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "settencento-2.jpeg",
+        url: "settecento-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -484,7 +484,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "settencento-3.jpeg",
+        url: "settecento-3.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -504,7 +504,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "conteporaneo-1.jpeg",
+        url: "contemporaneo-1.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -519,7 +519,7 @@ export const ArtworksCollection = [
             z: 87.94999999999895
         },
         size: 1.674,
-        url: "conteporaneo-2.jpeg",
+        url: "contemporaneo-2.jpeg",
         author: "Elia Lazzari",
         year: 2023,
         redirectUrl: "https://www.eliusoutdoor.com/"
@@ -713,7 +713,7 @@ export const ArtworksCollection = [
         description: "Descrizione dell'opera 56",
         position: { x: 0.5650000000000241, y: 4.970000000000005, z: -11.939999999999905 },
         rotation: { x: 6.2849999999999016, y: 3.145000000000036, z: 81.67999999999611 },
-        size: 11.09,
+        size: 8.09,
         url: "louis-wain.jpeg",
         author: "Elia Lazzari",
         year: 2023,

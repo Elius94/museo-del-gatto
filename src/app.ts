@@ -37,7 +37,7 @@ function hasTouchSupport() {
   return 'ontouchstart' in document.documentElement;
 }
 
-const TUNING = true;
+const TUNING = false;
 
 let textureQuality = isMobile() ? "MD" : "HD";
 // Check if quality argument is passed in the url and set the texture quality accordingly
@@ -235,12 +235,78 @@ const bullets = new Bullets({
   gravity: GRAVITY
 });
 
-const npc = new Npc({
+const gattone = new Npc({
+  model: './models/gltf/additional_models/bicolor_cat.glb',
   scene,
+  octree: worldOctree,
   position: new THREE.Vector3(-15, 0, 0),
   rotation: new THREE.Euler(0, 45, 0),
   scale: 20
 });
+
+const garfield = new Npc({
+  model: './models/gltf/additional_models/garfield.glb',
+  scene,
+  octree: worldOctree,
+  position: new THREE.Vector3(7, 3, -7),
+  rotation: new THREE.Euler(0, 0, 0),
+  scale: 0.02
+});
+
+const gatto_con_gli_stivali = new Npc({
+  model: './models/gltf/additional_models/puss_in_boots.glb',
+  scene,
+  octree: worldOctree,
+  position: new THREE.Vector3(8, 3.1, 8),
+  rotation: new THREE.Euler(0, 0, 0),
+  scale: 0.3
+});
+
+// Statuette egizie 
+// const statuetta1 = new Npc({
+//   model: './models/gltf/additional_models/bastet_cat_goddess_egypt.glb',
+//   scene,
+//   octree: worldOctree,
+//   position: new THREE.Vector3(-1.516, 1.5, 8.821),
+//   rotation: new THREE.Euler(0, 0, 0),
+//   scale: 1
+// });
+
+// const statuetta2 = new Npc({
+//   model: './models/gltf/additional_models/bronze_cat.glb',
+//   scene,
+//   octree: worldOctree,
+//   position: new THREE.Vector3(-4.494, 1.5, 8.821),
+//   rotation: new THREE.Euler(0, 0, 0),
+//   scale: 1
+// });
+
+// const statuetta3 = new Npc({
+//   model: './models/gltf/additional_models/cleopatras_cat__egyptian_cat.glb',
+//   scene,
+//   octree: worldOctree,
+//   position: new THREE.Vector3(1.541, 1.5, 5.766),
+//   rotation: new THREE.Euler(0, 0, 0),
+//   scale: 1
+// });
+
+// const statuetta4 = new Npc({
+//   model: './models/gltf/additional_models/egyptian_cat.glb',
+//   scene,
+//   octree: worldOctree,
+//   position: new THREE.Vector3(-1.425, 1.5, 5.764),
+//   rotation: new THREE.Euler(0, 0, 0),
+//   scale: 1
+// });
+
+// const statuetta5 = new Npc({
+//   model: './models/gltf/additional_models/egyptian_sculpture_cat_photogrammetry.glb',
+//   scene,
+//   octree: worldOctree,
+//   position: new THREE.Vector3(-4.494, 1.5, 5.671),
+//   rotation: new THREE.Euler(0, 0, 0),
+//   scale: 0.1
+// });
 
 if (!isMobile() || !hasTouchSupport()) {
   document.addEventListener('keydown', (event) => {
@@ -897,7 +963,16 @@ function animate() {
   // an object traversing another too quickly for detection.
   gamepad.update();
   // lightHelper.update()
-  npc.update(deltaTime);
+  gattone.update(deltaTime);
+  garfield.update(deltaTime);
+  gatto_con_gli_stivali.update(deltaTime);
+
+  // statuette
+  // statuetta1.update(deltaTime);
+  // statuetta2.update(deltaTime);
+  // statuetta3.update(deltaTime);
+  //statuetta4.update(deltaTime);
+  //statuetta5.update(deltaTime);
 
   for (let i = 0; i < STEPS_PER_FRAME; i++) {
     controls(deltaTime);
