@@ -56,7 +56,7 @@ let msStats: any = null;
 let memoryStats: any = null;
 let selectedShader = GammaCorrectionShader
 let selectedToneMapping = "ACESFilmicToneMapping";
-let toneMappingExp = 1.0;
+let toneMappingExp = 0.8;
 let toneMappingMethods = {
   NoToneMapping: THREE.NoToneMapping,
   LinearToneMapping: THREE.LinearToneMapping,
@@ -166,7 +166,7 @@ renderer.xr.enabled = true;
 container.appendChild(renderer.domElement);
 
 /*const texture = */txtLoader.load(
-  `./textures/general/HD/sky.jpg`, // Always use HD texture for the sky
+  `./textures/general/HD/PANO0001_pano.jpg`, // Always use HD texture for the sky
   (t) => {
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     pmremGenerator.compileEquirectangularShader();
@@ -263,50 +263,60 @@ const gatto_con_gli_stivali = new Npc({
 });
 
 // Statuette egizie 
-// const statuetta1 = new Npc({
-//   model: './models/gltf/additional_models/bastet_cat_goddess_egypt.glb',
-//   scene,
-//   octree: worldOctree,
-//   position: new THREE.Vector3(-1.516, 1.5, 8.821),
-//   rotation: new THREE.Euler(0, 0, 0),
-//   scale: 1
-// });
+const statuetta1 = new Npc({
+  model: './models/gltf/additional_models/bastet_cat_goddess_egypt.glb',
+  scene,
+  octree: worldOctree,
+  sphereCollider: true,
+  showFlagStand: false,
+  position: new THREE.Vector3(1.730, 0.9, -1.499),
+  rotation: new THREE.Euler(0, 0, 0),
+  scale: 0.01
+});
 
-// const statuetta2 = new Npc({
-//   model: './models/gltf/additional_models/bronze_cat.glb',
-//   scene,
-//   octree: worldOctree,
-//   position: new THREE.Vector3(-4.494, 1.5, 8.821),
-//   rotation: new THREE.Euler(0, 0, 0),
-//   scale: 1
-// });
+const statuetta2 = new Npc({
+  model: './models/gltf/additional_models/bronze_cat.glb',
+  scene,
+  octree: worldOctree,
+  sphereCollider: true,
+  showFlagStand: false,
+  position: new THREE.Vector3(-1.815, 0.6, 1.184),
+  rotation: new THREE.Euler(0, 135, 0),
+  scale: 0.6
+});
 
-// const statuetta3 = new Npc({
-//   model: './models/gltf/additional_models/cleopatras_cat__egyptian_cat.glb',
-//   scene,
-//   octree: worldOctree,
-//   position: new THREE.Vector3(1.541, 1.5, 5.766),
-//   rotation: new THREE.Euler(0, 0, 0),
-//   scale: 1
-// });
+const statuetta3 = new Npc({
+  model: './models/gltf/additional_models/cleopatras_cat__egyptian_cat.glb',
+  scene,
+  octree: worldOctree,
+  sphereCollider: true,
+  showFlagStand: false,
+  position: new THREE.Vector3(-4.8, 1.1, 6.3),
+  rotation: new THREE.Euler(0, 180, 0),
+  scale: 0.35
+});
 
-// const statuetta4 = new Npc({
-//   model: './models/gltf/additional_models/egyptian_cat.glb',
-//   scene,
-//   octree: worldOctree,
-//   position: new THREE.Vector3(-1.425, 1.5, 5.764),
-//   rotation: new THREE.Euler(0, 0, 0),
-//   scale: 1
-// });
+const statuetta4 = new Npc({
+  model: './models/gltf/additional_models/egyptian_cat.glb',
+  scene,
+  octree: worldOctree,
+  sphereCollider: true,
+  showFlagStand: false,
+  position: new THREE.Vector3(-4.279, 1.3, 5.6),
+  rotation: new THREE.Euler(0, 90, 0),
+  scale: 1
+});
 
-// const statuetta5 = new Npc({
-//   model: './models/gltf/additional_models/egyptian_sculpture_cat_photogrammetry.glb',
-//   scene,
-//   octree: worldOctree,
-//   position: new THREE.Vector3(-4.494, 1.5, 5.671),
-//   rotation: new THREE.Euler(0, 0, 0),
-//   scale: 0.1
-// });
+const statuetta5 = new Npc({
+  model: './models/gltf/additional_models/egyptian_sculpture_cat_photogrammetry.glb',
+  scene,
+  octree: worldOctree,
+  sphereCollider: true,
+  showFlagStand: false,
+  position: new THREE.Vector3(-1.819, 1, -1.294),
+  rotation: new THREE.Euler(0, -90, 0),
+  scale: 0.03
+});
 
 if (!isMobile() || !hasTouchSupport()) {
   document.addEventListener('keydown', (event) => {
@@ -968,11 +978,11 @@ function animate() {
   gatto_con_gli_stivali.update(deltaTime);
 
   // statuette
-  // statuetta1.update(deltaTime);
-  // statuetta2.update(deltaTime);
-  // statuetta3.update(deltaTime);
-  //statuetta4.update(deltaTime);
-  //statuetta5.update(deltaTime);
+  statuetta1.update(deltaTime);
+  statuetta2.update(deltaTime);
+  statuetta3.update(deltaTime);
+  statuetta4.update(deltaTime);
+  statuetta5.update(deltaTime);
 
   for (let i = 0; i < STEPS_PER_FRAME; i++) {
     controls(deltaTime);

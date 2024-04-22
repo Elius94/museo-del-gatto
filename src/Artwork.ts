@@ -18,7 +18,7 @@ export interface ArtworkFrameOptions {
     worldOctree?: Octree;
     title?: string;
     author?: string;
-    year?: number;
+    year?: number | string;
     description?: string;
     redirectUrl?: string;
 }
@@ -33,7 +33,7 @@ class ArtworkFrame {
     quality: string;
     title?: string;
     author?: string;
-    year?: number;
+    year?: number | string;
     description?: string;
     redirectUrl?: string;
 

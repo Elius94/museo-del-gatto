@@ -43,7 +43,22 @@ export class Bullets {
         this.sphereGeometry = new THREE.IcosahedronGeometry(SPHERE_RADIUS, 5);
         this.sphereMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });
         this.texture = new THREE.TextureLoader().load('./textures/catxture.jpeg');
-        this.sphereMaterial.map = this.texture;
+
+        const textureLoader = new THREE.TextureLoader();
+        textureLoader.load(
+            './textures/catxture.jpeg',
+            (texture) => {
+                // La texture è stata caricata correttamente, puoi procedere con l'assegnazione al materiale della sfera
+                this.texture = texture;
+                this.sphereMaterial.map = this.texture;
+            },
+            (xhr) => {
+                console.log((xhr.loaded / xhr.total * 100) + '% caricato');
+            },
+            (error) => {
+                console.error('Errore nel caricamento della texture', error);
+            }
+        );
 
         this.vector1 = new THREE.Vector3();
         this.vector2 = new THREE.Vector3();

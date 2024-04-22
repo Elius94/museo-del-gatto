@@ -219,7 +219,7 @@ select {
     -webkit-filter: blur(4px); */
     background: 
         radial-gradient(transparent, black),
-        url("./textures/bg/20220521-DSC08782.jpg");
+        url("./textures/bg/home.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
